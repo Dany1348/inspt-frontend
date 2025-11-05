@@ -7,6 +7,8 @@ function DeleteUser() {
 
     const handleDelete = async () => {
         await fetch(API_ROUTES.DELETE_USER(dni), { method: 'DELETE' });
+        console.log(`Se elimino el usuario ${dni}`);
+        
     };
 
     return (

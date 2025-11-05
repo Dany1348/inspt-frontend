@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { API_ROUTES } from '../routes';
 
 function CreateUser() {
-    const [user, setUser] = useState({ dni: '', nombre: '', apellido: '', correo: '' });
+    const [user, setUser] = useState({ dni: '', nombre: '', password: '', rol: '', correo: '' });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,7 +20,8 @@ function CreateUser() {
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="DNI" onChange={(e) => setUser({ ...user, dni: e.target.value })} />
                 <input type="text" placeholder="Nombre" onChange={(e) => setUser({ ...user, nombre: e.target.value })} />
-                <input type="text" placeholder="Apellido" onChange={(e) => setUser({ ...user, apellido: e.target.value })} />
+                <input type="password" placeholder="Password" onChange={(e) => setUser({ ...user, password: e.target.value })} />
+                <input type="text" placeholder="Rol" onChange={(e) => setUser({ ...user, rol: e.target.value })} />
                 <input type="email" placeholder="Correo" onChange={(e) => setUser({ ...user, correo: e.target.value })} />
                 <button type="submit">Crear</button>
             </form>
