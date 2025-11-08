@@ -16,7 +16,7 @@ function ViewUsers() {
             <h2>Usuarios Registrados</h2>
             <ul>
                 {users.map((user) => (
-                    <li key={user.dni}>{user.nombre} {user.apellido} - {user.correo}</li>
+                    <li key={user.dni}>{user.nombre} {user.rol} - {user.correo}</li>
                 ))}
             </ul>
             <Link to="/">Volver al Inicio</Link>

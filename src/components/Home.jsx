@@ -8,7 +8,7 @@ function Home() {
                 
                 <li><Link to="/products/view">Ver Todos los Productos</Link></li>
                 <li><Link to="/products/find">Buscar Producto</Link></li>
-                <li><Link to="/create">Registrarse</Link></li>
+                <li><Link to="/registrar">Registrarse</Link></li>
                 <li><Link to="/login">Login</Link></li>
             </ul>
         </div>
