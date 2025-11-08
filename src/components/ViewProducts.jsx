@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { API_ROUTES } from '../routes.js';
+//import imagen1 from '../assets/';
+
 
 function ViewProducts() {
     const [products, setProducts] = useState([]);
@@ -16,7 +18,11 @@ function ViewProducts() {
             <h2>Productos en existencia</h2>
             <ul>
                 {products.map((producto) => (
-                    <li key={producto.id}>{producto.nombre} {producto.precio} - {producto.descripcion}</li>
+                    <li key={producto.id}>{producto.nombre} {producto.precio}
+                    <img src={producto.imagen}  height={80} width={80} alt={producto.nombre} />
+                        <button onClick={()=> agregarProducto(producto)} > Agregar</button>
+                        <Link  to={`/products/find/${producto.id}`} > Detalles </Link>
+                    </li>
                 ))}
             </ul>
             <Link to="/">Volver al Inicio</Link>
