@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState ,useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { API_ROUTES } from '../routes.js';
-//import imagen1 from '../assets/';
+import { CarritoContext } from '../context/CarritoContext.jsx';
 
 
 function ViewProducts() {

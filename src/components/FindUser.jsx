@@ -17,7 +17,7 @@ function FindUser() {
             <h2>Buscar Usuario</h2>
             <input type="text" placeholder="DNI" onChange={(e) => setDni(e.target.value)} />
             <button onClick={handleSearch}>Buscar</button>
-            {user && <div>{user.nombre} {user.apellido} - {user.correo}</div>}
+            {user && <div>{user.nombre} {user.rol} - {user.correo}</div>}
             <Link to="/">Volver al Inicio</Link>
         </div>
     );

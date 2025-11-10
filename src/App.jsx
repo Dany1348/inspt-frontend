@@ -10,6 +10,8 @@ import FindUser from './components/FindUser';
 import UpdateUser from './components/UpdateUser';
 import DeleteUser from './components/DeleteUser';
 import ViewProducts from './components/ViewProducts';
+import ViewProducts2 from './components/ViewProducts2';
+import Carrito from './components/Carrito';
 import CreateProduct from './components/CreateProduct';
 import FindProduct from './components/FindProduct';
 import UpdateProduct from './components/UpdateProduct';
@@ -60,7 +62,8 @@ function App() {
               </RutaProtegida>
             }
           />
-          <Route path='/products/view' element={<ViewProducts/>}></Route>
+          <Route path='/products/view' element={<ViewProducts2/>}></Route>
+          <Route path='/products/carrito' element={<Carrito/>}></Route>
           <Route path='/products/create' element={<CreateProduct/>}></Route>
           <Route path='/products/find' element={<FindProduct/>}></Route>
           <Route path='/products/update' element={<UpdateProduct/>}></Route>
