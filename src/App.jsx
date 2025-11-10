@@ -4,6 +4,7 @@ import Home from './components/Home';
 import HomeAdmin from './components/HomeAdmin';
 import HomeVendedor from './components/HomeVendedor';
 import Login from './pages/Login';
+import Login2 from './pages/Login2';
 import ViewUsers from './components/ViewUsers';
 import CreateUser from './components/CreateUser';
 import FindUser from './components/FindUser';
@@ -39,7 +40,8 @@ function App() {
             }
           />
           <Route path="/vendedor" element={<HomeVendedor />}></Route>
-          <Route path="/login" element={<Login />}></Route>
+          <Route path="/login" element={<Login />}></Route> 
+          <Route path="/login2" element={<Login2 />}></Route>
           <Route path='/view' element={<ViewUsers/>}></Route>
           {/*<Route path="/create" element={<CreateUser />} />*/}
           <Route

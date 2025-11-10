@@ -6,6 +6,7 @@ export const API_ROUTES = {
     CREATE_USER: `${BASE_URL}/users/create`,
     FIND_USER: (dni) => `${BASE_URL}/users/find/${dni}`,
     LOGIN_USER: (dni) => `${BASE_URL}/users/login/${dni}`,
+    LOGIN_USER2:  `${BASE_URL}/users/login`,
     UPDATE_USER: (dni) => `${BASE_URL}/users/update/${dni}`,
     DELETE_USER: (dni) => `${BASE_URL}/users/delete/${dni}`,
     GET_ALL_PRODUCTS: `${BASE_URL}/products/all`,
