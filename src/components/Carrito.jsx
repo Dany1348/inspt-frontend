@@ -8,18 +8,27 @@ import { API_ROUTES } from "../routes.js";
 
 const Carrito = () => {
   let hoy = new Date();
+        hoy = hoy.toDateString();
   const { usuario } = useAuthContext();
   const { carrito, eliminarDelCarrito } = useContext(CarritoContext); 
-  const [factura, setFactura] = useState({ fecha: 'otravez', cliente: "cliente2", productos: carrito, total: 0 });
+  const [factura, setFactura] = useState({ fecha: hoy, cliente: usuario, productos: carrito, total: 0 });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        let hoy = new Date();
+        hoy = hoy.toDateString();
+        //console.log(" Esta es la fecha " , hoy);
+        //setUser({ ...user, nombre: e.target.value })
+        setFactura({...factura , fecha:hoy});
+        setFactura({...factura , cliente:usuario});
+        console.log( " Es la factura con la fecha :  " , factura);
+        
         await fetch(API_ROUTES.CREATE_FACTURA, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(factura),
         });
-        console.log( " Es el final del createFactura" , factura);
+        
         return <Navigate to="/" replace />;
     };
 

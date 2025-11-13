@@ -18,6 +18,7 @@ import FindProduct from './components/FindProduct';
 import UpdateProduct from './components/UpdateProduct';
 import DeleteProduct from './components/DeleteProduct';
 import RutaProtegida from './components/RutaProtegida';
+import RutaProtegidaV from './components/RutaProtegidaV';
 import RegistrarUser from './components/RegistrarUser';
 import DetalleProduct from './components/DetalleProduct';
 import './App.css'
@@ -32,18 +33,29 @@ function App() {
       
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route
-            path="/admin"
+          <Route path="/admin"
             element={
               <RutaProtegida >
                 <HomeAdmin />
               </RutaProtegida>
             }
           />
-          <Route path="/vendedor" element={<HomeVendedor />}></Route>
-          <Route path="/login" element={<Login />}></Route> 
-          <Route path="/login2" element={<Login2 />}></Route>
-          <Route path='/view' element={<ViewUsers/>}></Route>
+          <Route path="/vendedor"
+           element={
+            <RutaProtegidaV>
+                  <HomeVendedor />
+            </RutaProtegidaV>}
+          />
+          {/*<Route path="/login2" element={<Login />}></Route> */} 
+          <Route path="/login" element={<Login2 />}></Route>
+          {/*<Route path='/view' element={<ViewUsers/>}></Route> */}
+          <Route path="/view"
+            element={
+              <RutaProtegida >
+                <ViewUsers/>
+              </RutaProtegida>
+            }
+          />
           {/*<Route path="/create" element={<CreateUser />} />*/}
           <Route
             path="/create"
@@ -55,7 +67,15 @@ function App() {
           />
           <Route path="/registrar" element={<RegistrarUser />} />
           <Route path="/find" element={<FindUser />} />
-          <Route path="/update" element={<UpdateUser />} />
+          {/*<Route path="/update" element={<UpdateUser />} /> */}
+          <Route
+            path="/update"
+            element={
+              <RutaProtegida >
+                <UpdateUser />
+              </RutaProtegida>
+            }
+          />
          {/* <Route path="/delete" element={<DeleteUser />} />*/}
           <Route
             path="/delete"
@@ -67,10 +87,28 @@ function App() {
           />
           <Route path='/products/view' element={<ViewProducts2/>}></Route>
           <Route path='/products/carrito' element={<Carrito/>}></Route>
-          <Route path='/products/create' element={<CreateProduct/>}></Route>
+          {/*<Route path='/products/create' element={<CreateProduct/>}></Route> */}
+          <Route path="/products/create"
+           element={
+            <RutaProtegidaV>
+                  <CreateProduct/>
+            </RutaProtegidaV>}
+          />
           <Route path='/products/find' element={<FindProduct/>}></Route>
-          <Route path='/products/update' element={<UpdateProduct/>}></Route>
-          <Route path='/products/delete' element={<DeleteProduct/>}></Route>
+          {/*<Route path='/products/update' element={<UpdateProduct/>}></Route> */}
+          <Route path="/products/update"
+           element={
+            <RutaProtegidaV>
+                  <UpdateProduct/>
+            </RutaProtegidaV>}
+          />
+          {/*<Route path='/products/delete' element={<DeleteProduct/>}></Route> */}
+          <Route path="/products/delete"
+           element={
+            <RutaProtegidaV>
+                  <DeleteProduct/>
+            </RutaProtegidaV>}
+          />
           <Route path='/products/detalle' element={<DetalleProduct/>}></Route>
         </Routes>
       

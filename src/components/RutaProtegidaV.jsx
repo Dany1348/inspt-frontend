@@ -6,7 +6,7 @@ const RutaProtegida = ({children}) => {
 
   console.log("Usuario Context" ,usuario);
   console.log("Rol Context" ,rol);
-  if(usuario != "admin")
+  if(rol != "vendedor")
     return <Navigate to="/login" replace />;
   
   return children;

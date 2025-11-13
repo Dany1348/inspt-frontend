@@ -12,6 +12,8 @@ const Login = () => {
   
 
   const  {login } = useAuthContext();
+  let  {usuario } = useAuthContext();
+
   //const logout  = useAuthContext();
   const navigate = useNavigate();
   
@@ -25,19 +27,23 @@ const Login = () => {
             body: JSON.stringify(user),
             //body: JSON.stringify({ dni: dni,  password: contrasenia }),
         });
-        console.log("Este es el user que se envia ", user);
-        
+        //console.log("Este es el user que se envia ", user);
+        console.log("Este es el usuario que llega ", usuario);
         const data = await response.json();
         setUser(data);
         console.log(" LLegamos aca con la data  " ,data.rol);
         console.log(" LLegamos aca con la data  " ,data);
             if(data.rol == 'admin') {
-      login(user.dni);
+      login(data.dni ,data.rol);
       navigate('/admin');
     } else if(data.rol == 'vendedor') {
-      login(user.dni);
+      login(data.dni,data.rol);
+      console.log("Este es el usuario que se carga ", usuario);
       navigate('/vendedor');
-    } else{
+    } else if(data.rol == 'cliente') {
+      login(data.dni,data.rol);
+      navigate('/');
+    }else{
       alert('Usuario o Contraseña invalido');
     }
         }catch (error)
