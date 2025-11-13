@@ -13,6 +13,8 @@ export const AuthProvider = ({ children }) => {
     const token = `fake-token-${nombreUsuario}`;
     localStorage.setItem('authToken', token);
     setUsuario(nombreUsuario);
+    console.log("Este es el id cargado " , usuario);
+    
   }                                        
   const logout = () => {
     localStorage.removeItem('authToken');

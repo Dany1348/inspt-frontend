@@ -4,6 +4,7 @@ const BASE_URL = "http://localhost:3000";
 export const API_ROUTES = {
     GET_ALL_USERS: `${BASE_URL}/users/all`,
     CREATE_USER: `${BASE_URL}/users/create`,
+    CREATE_FACTURA: `${BASE_URL}/facturas/create`,
     FIND_USER: (dni) => `${BASE_URL}/users/find/${dni}`,
     LOGIN_USER: (dni) => `${BASE_URL}/users/login/${dni}`,
     LOGIN_USER2:  `${BASE_URL}/users/login`,

@@ -19,6 +19,7 @@ import UpdateProduct from './components/UpdateProduct';
 import DeleteProduct from './components/DeleteProduct';
 import RutaProtegida from './components/RutaProtegida';
 import RegistrarUser from './components/RegistrarUser';
+import DetalleProduct from './components/DetalleProduct';
 import './App.css'
 
 
@@ -70,6 +71,7 @@ function App() {
           <Route path='/products/find' element={<FindProduct/>}></Route>
           <Route path='/products/update' element={<UpdateProduct/>}></Route>
           <Route path='/products/delete' element={<DeleteProduct/>}></Route>
+          <Route path='/products/detalle' element={<DetalleProduct/>}></Route>
         </Routes>
       
       <p className="read-the-docs">
