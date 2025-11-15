@@ -19,9 +19,12 @@ import UpdateProduct from './components/UpdateProduct';
 import DeleteProduct from './components/DeleteProduct';
 import RutaProtegida from './components/RutaProtegida';
 import RutaProtegidaV from './components/RutaProtegidaV';
+import RutaProtegidaC from './components/RutaProtegidaC';
 import RegistrarUser from './components/RegistrarUser';
 import DetalleProduct from './components/DetalleProduct';
 import ViewFacturas from './components/VerFacturas';
+import ViewFacturasCliente from './components/VerFacturasCliente';
+import DetalleFactura2 from './components/DetalleFactura2';
 import './App.css'
 
 
@@ -87,7 +90,13 @@ function App() {
             }
           />
           <Route path='/products/view' element={<ViewProducts2/>}></Route>
-          <Route path='/products/carrito' element={<Carrito/>}></Route>
+          {/*<Route path='/products/carrito' element={<Carrito/>}></Route>*/}
+          <Route path="/products/carrito"
+           element={
+            <RutaProtegidaC>
+                  <Carrito/>
+            </RutaProtegidaC>}
+          />
           {/*<Route path='/products/create' element={<CreateProduct/>}></Route> */}
           <Route path="/products/create"
            element={
@@ -112,7 +121,8 @@ function App() {
           />
           <Route path='/products/detalle/:id' element={<DetalleProduct/>}></Route>
           <Route path='/facturass/view' element={<ViewFacturas/>}></Route>
-          
+          <Route path='/facturass/view/:cliente' element={<ViewFacturasCliente/>}></Route>
+          <Route path='/facturas/detalle/:id' element={<DetalleFactura2/>}></Route>
         </Routes>
             
       <p className="read-the-docs">

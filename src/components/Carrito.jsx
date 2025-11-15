@@ -60,6 +60,7 @@ const Carrito = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(factura),
     });
+    setFactura({});
     vaciarCarrito();
     navigate('/');
     alert (" Felicitaciones Excelente compra !!!");

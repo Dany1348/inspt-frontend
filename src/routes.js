@@ -16,4 +16,6 @@ export const API_ROUTES = {
     DELETE_PRODUCT: (id) => `${BASE_URL}/products/delete/${id}`,
     GET_ALL_FACTURAS: `${BASE_URL}/facturas/all`,
     CREATE_FACTURA: `${BASE_URL}/facturas/create`,
+    FIND_FACTURA: (_id) => `${BASE_URL}/facturas/find/${_id}`,
+    
 };

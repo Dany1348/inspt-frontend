@@ -1,12 +1,4 @@
-/*
-function DetalleProduct(){
-return (
-    <h1>  Detalle del Producto</h1>
-)
 
-}
-
-export default DetalleProduct;*/
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { API_ROUTES } from '../routes';
@@ -28,6 +20,7 @@ const ProductoDetalle = () => {
   return(
     <>
       <h2>Detalles del Producto Nro {id}</h2>
+     
       <img src={producto.imagen} alt={producto.nombre} width={100} height={100} />
       <h3>{producto.nombre}</h3>
       <p>{producto.descripcion}</p>
