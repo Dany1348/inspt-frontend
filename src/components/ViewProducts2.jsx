@@ -45,13 +45,14 @@ function ViewProducts2() {
             <h2>Productos en existencia</h2>
             <ul>
                 {products.map((producto) => (
+                    producto.cantidad > 0 ?
                     <li key={producto.id}>{producto.nombre} {producto.precio}
                         <img src={producto.imagen} height={80} width={80} alt={producto.nombre} />
                         <button onClick={() => agregarAlCarrito(producto)} > Agregar</button>
                         {  /* <button onClick={()=> handleSearch(producto.id)} > Detalles</button>
                         <Link  to={`/products/detalle/`${producto.id}`} > Detalles </Link>*/}
-                        <Link to={`/products/detalle/`} > Detalles </Link>
-                    </li>
+                        <Link to={`/products/detalle/${producto.id}`} > Detalles </Link>
+                    </li> : true 
                 ))}
             </ul>
             <Link to="/">Volver al Inicio</Link>

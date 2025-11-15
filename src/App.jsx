@@ -21,6 +21,7 @@ import RutaProtegida from './components/RutaProtegida';
 import RutaProtegidaV from './components/RutaProtegidaV';
 import RegistrarUser from './components/RegistrarUser';
 import DetalleProduct from './components/DetalleProduct';
+import ViewFacturas from './components/VerFacturas';
 import './App.css'
 
 
@@ -32,7 +33,7 @@ function App() {
     <>
       
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home /> }></Route>
           <Route path="/admin"
             element={
               <RutaProtegida >
@@ -109,9 +110,11 @@ function App() {
                   <DeleteProduct/>
             </RutaProtegidaV>}
           />
-          <Route path='/products/detalle' element={<DetalleProduct/>}></Route>
+          <Route path='/products/detalle/:id' element={<DetalleProduct/>}></Route>
+          <Route path='/facturass/view' element={<ViewFacturas/>}></Route>
+          
         </Routes>
-      
+            
       <p className="read-the-docs">
         Estamos comenzando con el frontend
       </p>

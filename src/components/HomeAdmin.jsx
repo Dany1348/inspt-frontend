@@ -12,6 +12,7 @@ function HomeAdmin() {
                 <li><Link to="/delete">Eliminar Usuario</Link></li>
                 <li><Link to="/products/view">Ver Todos los Productos</Link></li>
                 <li><Link to="/products/find">Buscar Producto</Link></li>
+                <li><Link to="/facturass/view">Ver Todas las Facturas</Link></li>
             </ul>
         </div>
     );

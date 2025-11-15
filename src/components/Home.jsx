@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ViewProducts2 from './ViewProducts2';
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
                 <li><Link to="/registrar">Registrarse</Link></li>
                 <li><Link to="/login">Login</Link></li>
             </ul>
+            <ViewProducts2/>
         </div>
     );
 }
