@@ -1,0 +1,289 @@
+header{
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(87, 15, 196);
+    margin-top: -15%;
+    margin-left: 2%;
+    margin-right: 2%; 
+    
+    border-radius: 15px;
+    /* position: fixed; */
+    max-height: auto;
+    /* position:sticky;
+    top: 10px; */  
+}
+
+main{
+    margin-top: 20%;
+  } 
+
+  body{
+    height: 100vh;
+    background: radial-gradient(red, rgb(137, 137, 2),magenta);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    margin: 0px;
+}
+
+h1{
+    text-align: center;
+    padding: 1%;
+    margin: 0.5%;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em;
+    color: rgb(5, 32, 238);
+}
+
+.fas{
+    color: rgb(18, 23, 1);
+  } 
+  .fas:hover{
+    color: orange;
+  }
+  /* .fa-shopping-cart{
+    color: red;
+  } */
+.fa-solid{
+  color: red;
+}
+  nav{
+    width: 70%;
+    height: 9%;
+    color: aquamarine;
+    background-color: rgb(190, 249, 41);
+    margin-left: 2%;
+    padding-right: 20%;
+    /* margin: 0.5%; */
+    position:fixed;
+    top:0;
+  }
+  img{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  ul{
+    /* text-decoration: none; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    /* color: chartreuse; */
+  }
+
+  li{
+    display: inline;
+    color: rgb(12, 6, 201);
+    margin: 1%;
+    margin-bottom: 1%;
+    font-size: small;
+    /* background-color: aqua; */
+  }
+.nav ul li a{
+  color: aquamarine;
+}
+  a{
+    /*color: chartreuse;*/
+    color: #060a5f;
+    /* background-color: blue; */
+    /* border: solid 1px black; */
+    border-radius: 5px;
+    /* padding-right: 15px; */
+    /* padding-left: 15px; */
+
+  }
+
+  a:hover{
+    font-size: 1.3em;
+    color: rgb(136, 0, 255);
+    transition:all .5s ease-in-out; 
+  }
+
+  /* Estilos para las tarjetas de productos */
+.main_cards {
+  display: flex; /* Usamos flexbox */
+  justify-content: space-around; /* Espaciamos las tarjetas uniformemente */
+  flex-wrap: wrap; /* Permitimos que las tarjetas pasen a la siguiente línea si es necesario */
+  margin-top: 20px; /* Espacio superior */
+}
+
+.card {
+  margin: 10px; /* Espacio alrededor de cada tarjeta */
+  /* background-color: #2272c8; */
+  padding: 5px;
+}
+#precio{
+  font-weight: bolder;
+}
+  @font-face{
+    font-family: 'Audiowide-Regular';
+    src:url(./Fuentes/Audiowide/Audiowide-Regular.ttf);
+    font-weight: bold;
+    font-style: bold;
+  }
+  .video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+   iframe{
+    margin-bottom: 5px;
+  } 
+  form{
+    margin-left: 10%;
+    margin-bottom: 2%;
+
+  }
+  form label{
+    display: inline-block;
+    font-size: 1.2em;
+    color: blue;
+    width: 10%;
+  }
+  form input{
+    font-size: 1.2em;
+  } 
+  form textarea{
+    font-size: 1.1em;
+  }
+  form span{
+    margin-left: 11%;
+  }
+.volver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+button{
+    width: 4em;
+    /*height: 1.5em;**/
+    height: fit-content;
+    font-size: 1.0em;
+    color: blue;
+    background-color: rgb(89, 166, 12);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 2px;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    height: 40%;
+    font-family: "Audiowide-Regular";
+    font-weight: bold; 
+    font-size: 2em;
+    color: yellowgreen;
+    margin: 0px;
+    padding: 3%;
+    background-image:url(./img/greenforest.png);
+    background-size: cover;
+    background-position: center;   
+}
+
+/* Estilos para las imágenes de redes sociales */
+footer .RSocial{
+  width: 40px; /* Ancho de los iconos */
+  margin: 5px; /* Espacio alrededor de cada icono */
+}
+/* .redesSociales{
+  padding: 5%;
+} */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr; /* tres columnas con fracciones diferentes */
+  grid-template-rows: auto; /* tres filas con tamaños auto */
+  gap : 10px;
+  margin: 10px;
+  padding: 3px;
+
+}
+
+.grid-item {
+  background-color: #3c80b3;
+}
+
+.grid-item-head{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding-top: 15%;
+  background-color: #3c80b3;
+}
+
+@media (min-width:600px){
+  .formulario{
+    /* display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; */
+    background-image:url(./img/data-center2.jpg);
+    color: white;
+  }
+  .formulario h2{
+    color: yellowgreen;
+    background-color: blue;
+    width: auto;
+  }
+  #formularioContenido label{
+    color: yellow;
+    background-color: rgb(21, 4, 77);
+    width: auto;
+  }
+  #formularioContenido{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@media(max-width:600px){
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr; /* una columnas con fracciones diferentes */
+    grid-template-rows: auto; /* tres filas con tamaños auto */
+    gap : 10px;
+    margin: 10px;
+    padding: 3px;
+  
+  }
+  header{
+    margin: 2%;
+    margin-bottom: 20px;
+  }
+.main_cards{
+  padding-top: 150px;
+}
+footer{
+  font-size: medium;
+  height: 10%;
+}
+.video iframe{ 
+    width: 90%;
+    height: auto;  
+}
+#formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#formularioContenido{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+}

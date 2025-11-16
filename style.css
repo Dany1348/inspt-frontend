@@ -1,0 +1,71 @@
+/* --- Estilos básicos y reinicio de márgenes --- */
+
+
+
+
+/* --- Encabezado (Header) --- */
+
+
+
+
+.icono-carrito {
+    color: white; /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* --- Navegación principal --- */
+nav ul {
+    list-style-type: none; /* Sin viñetas */
+    background: #555; /* Fondo oscuro */
+    padding: 10px; /* Espaciado interno */
+}
+
+nav ul li {
+    display: inline; /* Elementos en línea */
+    margin-right: 15px; /* Separación entre enlaces */
+}
+
+nav ul li a {
+    color: white; /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* --- Estilos de productos --- */
+.productos {
+    display: grid; /* Distribución en cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste automático */
+    gap: 20px; /* Separación entre productos */
+    margin-top: 20px; /* Margen superior */
+}
+
+.producto {
+    background: #f4f4f4; /* Fondo claro */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+}
+
+.producto h2 {
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.producto .precio {
+    color: green; /* Texto en color verde */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+.producto button {
+    width: 4em;
+    height: 1.5em;
+    font-size: 1.0em;
+    color: blue;
+    background-color: rgb(89, 166, 12);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 2px;
+}
+
+.producto button:hover {
+    background: #555; /* Cambio de color al pasar el cursor */
+}

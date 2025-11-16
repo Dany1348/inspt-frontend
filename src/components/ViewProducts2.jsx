@@ -46,7 +46,7 @@ function ViewProducts2() {
             <ul>
                 {products.map((producto) => (
                     producto.cantidad > 0 ?
-                    <li key={producto.id}>{producto.nombre} {producto.precio}
+                    <li key={producto.id}> {producto.nombre} Precio : $ {producto.precio}
                         <img src={producto.imagen} height={80} width={80} alt={producto.nombre} />
                         <button onClick={() => agregarAlCarrito(producto)} > Agregar</button>
                         {  /* <button onClick={()=> handleSearch(producto.id)} > Detalles</button>

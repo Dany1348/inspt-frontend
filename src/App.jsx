@@ -26,6 +26,7 @@ import ViewFacturas from './components/VerFacturas';
 import ViewFacturasCliente from './components/VerFacturasCliente';
 import DetalleFactura2 from './components/DetalleFactura2';
 import './App.css'
+import Footer from './components/Footer';
 
 
 
@@ -124,9 +125,9 @@ function App() {
           <Route path='/facturass/view/:cliente' element={<ViewFacturasCliente/>}></Route>
           <Route path='/facturas/detalle/:id' element={<DetalleFactura2/>}></Route>
         </Routes>
-            
+            <Footer></Footer>
       <p className="read-the-docs">
-        Estamos comenzando con el frontend
+        
       </p>
     </>
   )

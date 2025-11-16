@@ -1,18 +1,25 @@
 import { Link } from 'react-router-dom';
 import ViewProducts2 from './ViewProducts2';
+import Header from './Header';
+import Footer from './Footer';
 
 function Home() {
     return (
-        <div>
-            <h1>CRUD General</h1>
-            <ul>
-                
+        <div><br></br><br></br><br></br><br></br><br></br><br></br>
+        <br></br><br></br><br></br>
+            <Header/>
+            <h1></h1>
+            <nav>
+                <ul>
                 <li><Link to="/products/view">Ver Todos los Productos</Link></li>
                 <li><Link to="/products/find">Buscar Producto</Link></li>
                 <li><Link to="/registrar">Registrarse</Link></li>
                 <li><Link to="/login">Login</Link></li>
             </ul>
+            </nav>
+            
             <ViewProducts2/>
+            {/*<Footer/> */}
         </div>
     );
 }
