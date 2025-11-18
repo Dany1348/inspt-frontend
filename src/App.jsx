@@ -27,6 +27,7 @@ import ViewFacturasCliente from './components/VerFacturasCliente';
 import DetalleFactura2 from './components/DetalleFactura2';
 import './App.css'
 import Footer from './components/Footer';
+import RutaProtegidaLogin from './components/RutaProtegidaLogin';
 
 
 
@@ -52,7 +53,14 @@ function App() {
             </RutaProtegidaV>}
           />
           {/*<Route path="/login2" element={<Login />}></Route> */} 
-          <Route path="/login" element={<Login2 />}></Route>
+          {/*<Route path="/login" element={<Login2 />}></Route> */}
+          <Route path="/login"
+            element={
+              <RutaProtegidaLogin >
+                <Login2/>
+              </RutaProtegidaLogin>
+            }
+          />
           {/*<Route path='/view' element={<ViewUsers/>}></Route> */}
           <Route path="/view"
             element={
@@ -71,7 +79,15 @@ function App() {
             }
           />
           <Route path="/registrar" element={<RegistrarUser />} />
-          <Route path="/find" element={<FindUser />} />
+          { /*<Route path="/find" element={<FindUser />} /> */}
+          <Route
+            path="/find"
+            element={
+              <RutaProtegida >
+                <FindUser />
+              </RutaProtegida>
+            }
+          />
           {/*<Route path="/update" element={<UpdateUser />} /> */}
           <Route
             path="/update"
